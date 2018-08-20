@@ -1,0 +1,60 @@
+html{
+	background: #1D1D1D;
+	font-family: sans-serif;
+	color:#fff;
+	text-align: center;
+}
+
+a {color:#08BD01;
+   display:inline-block;}
+a:hover{color:red;}
+
+li{list-style-position: inside;}
+
+#jade{
+	font-size:2rem;
+	border:thin solid #80BD01;
+	box-shadow: .25rem .25rem .5rem rgba(255,255,255, .25);
+}
+.container{
+	margin:auto;
+	padding:1rem;
+	width:80%;
+}
+#logo-node{
+	margin:auto;
+	width:250px;
+	height:250px;
+	background: transparent url('../img/eddietorres.jpg') no-repeat center;
+	background-size: contain;
+}
+
+.poster{
+	max-width: 100px;
+}
+.table{
+	width:70%;
+	color:black;
+}
+.table td, .table th{
+	padding:1rem;
+}
+.table tr:first-child{
+	background-color: #292623;
+	color:#80BD01;
+}
+
+.table tr:nth-child(even) {background-color: #ccc;}
+.table tr:nth-child(odd):not(:first-child){background-color: #eee};
+
+.button{
+	padding: .5rem;
+	color:#fff;
+	background-color:#808D01;
+	cursor:pointer;
+}
+.button:hover{
+	opacity:.75;
+}
+.add{background: #0b0}
+

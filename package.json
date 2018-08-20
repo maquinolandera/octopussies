@@ -1,0 +1,18 @@
+{
+  "name": "basicos_express",
+  "version": "0.0.1",
+  "description": "Ejemplos basicos con framework expressjs",
+  "main": "expressbasico.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "nodejs"
+  ],
+  "author": "franchu",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

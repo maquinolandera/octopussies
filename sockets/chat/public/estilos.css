@@ -1,0 +1,29 @@
+html{
+	font:16px Helvetica,Arial
+}
+
+*{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+
+#chat-form{
+	background-color: #1D1D1D;
+	bottom: 0;
+	padding: .5rem;
+	font-size:0;
+	position:fixed;
+	width:100%;
+}
+#chat-form button{
+	padding:.5rem;
+	width:10%;
+	border:none;
+	background-color: #80BD01;
+}
+#message-text{
+	padding:1rem;
+	width:90%;
+	border:0;
+}

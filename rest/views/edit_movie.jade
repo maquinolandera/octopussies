@@ -1,0 +1,22 @@
+extends ./layout.jade
+block content
+	form.form(method="POST" action="/actualizar/#{data[0].movie_id}" )
+		fieldset		
+			div.container 
+				label(for="movie_id") IMDB id
+				input#movie_id(type="text",name="movie_ide",value="#{data[0].movie_id}",disabled, required)
+				input#movie_id(type="hidden" name="movie_id" value="#{data[0].movie_id")
+			div.container
+				label(for="title") Titulo:
+				input#title(type="text",name="title",value="#{data[0].title}" required)
+			div.container
+				label(for="release_year") Año:
+				input#rating(type="text",name="year",value="#{data[0].release_year}" required)
+			div.container
+				label(for="rating") Calificación:
+				input#rating(type="text",name="rating",value="#{data[0].rating}" required)
+			div.container
+				label(for="image") Poster:
+				input#image(type="text",name="image",value="#{data[0].image}")
+			div.container
+				input(type="submit",value="Editar")

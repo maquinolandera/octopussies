@@ -1,0 +1,21 @@
+extends ./layout.jade
+block content
+	form.form(method="post" action="/" )
+		fieldset		
+			div.container 
+				label(for="movie_id") IMDB id
+				input#movie_id(type="text",name="movie_id",required)
+			div.container
+				label(for="title") Titulo:
+				input#title(type="text",name="title",required)
+			div.container
+				label(for="release_year") Año:
+				input#rating(type="text",name="year",required)
+			div.container
+				label(for="rating") Calificación:
+				input#rating(type="text",name="rating",required)
+			div.container
+				label(for="image") Poster:
+				input#image(type="text",name="image",required)
+			div.container
+				input.button.add(type="submit",value="Agregar")

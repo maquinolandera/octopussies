@@ -1,0 +1,40 @@
+extends ./layout.jade
+block content
+    -var fecha = new Date()
+    -var hora = fecha.getHours()
+    -var min = fecha.getMinutes()
+    span Reloj:  #{hora} : #{min}
+    article#jade.container
+        h1= title
+        a(href="#{link}")= link
+        
+        img(src="#{imagen}")
+        P
+        p= descripcion
+
+    article.container
+        h2 estructura basica de jade
+        p generacion de html con el motor de plantillas
+            |concatencar contenido
+            |en varias lineas
+            |usar pipe '|'
+
+        include logo
+        p.
+            Lee la documentacion de la #[a(href="http://jade-lang.com/api" target="_blank") API] para ver la forma en que genera htmls la referencia del lenguaje #[a(href="http://jade-lang.com/reference" target="_blank") REFERENCIA]
+        button.presioname Presioname
+
+        script.
+            document.querySelector('.presioname').onclick = () =>{
+                    alert('Has presionado el boton 200 puntos')
+            }
+
+        if (hora < 12 )
+            
+            p la hora #{hora} es antes del meridiano AM
+        else
+            p la hora #{hora} es después del meridiano PM
+
+            
+
+

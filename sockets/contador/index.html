@@ -1,0 +1,39 @@
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Contador de conexiones</title>
+</head>
+<body>
+	<h1>Comunicación bidireccional con Socket.io</h1>
+	<h2 id="parraf"></h2>
+	<p id="hello"></p>
+	<p>
+		Número de conexiones activas <b id="connections"></b>
+	</p>
+	<script src="/socket.io/socket.io.js">
+	</script>
+	<script>
+	//función anonima que como parámetro tiene otra función que contiene el parámetro que viene del script de arriba guardado en modules está función está encapsulada con el objeto de encapsular los eventos 
+	(function(io){
+		'use strict'
+
+		var io = io(),
+		d = document
+		//Manejador que se comunicará con el servidor obteniendo el objeto data y enviándolo al DOM
+		io.on('hello',function(data){
+			console.log(data)
+			d.querySelector('#hello').innerHTML = data.message
+			//io.emit('evento2',{nombre:'Franchu',edad:'1000 años',alimentacion:'Sangre humana'})
+			
+
+		})
+		//manejador que extrae  del servidor el objeto que contiene el número de visitas y al cual se manda al DOM
+		io.on('connect users',function(data){
+			console.log('Actualizando desde el servidor. Hay '+data.numbers+' Conexiones activas ')
+			d.querySelector('#connections').innerHTML = data.numbers
+			d.querySelector('#parraf').innerHTML = data.names
+	})
+	})(io)
+	</script>
+</body>
+</html>
